@@ -33,7 +33,7 @@ Imagine a scenario with a population of size `N`, of which a subpopulation of si
 <!-- <equation class="equation" label="eq:hypergeometric_variance" align="center" raw="\operatorname{Var}\left( X \right) = n{K \over N}{(N-K) \over N}{N-n \over N-1}" alt="Variance for a hypergeometric distribution."> -->
 
 ```math
-\operatorname{Var}\left( X \right) = n{K \over N}{(N-K) \over N}{N-n \over N-1}
+\mathop{\mathrm{Var}}\left( X \right) = n{K \over N}{(N-K) \over N}{N-n \over N-1}
 ```
 
 <!-- <div class="equation" align="center" data-raw-text="\operatorname{Var}\left( X \right) = n{K \over N}{(N-K) \over N}{N-n \over N-1}" data-equation="eq:hypergeometric_variance">
@@ -202,11 +202,6 @@ For more information on the project, filing bug reports and feature requests, an
 
 ---
 
-## License
-
-See [LICENSE][stdlib-license].
-
-
 ## Copyright
 
 Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
@@ -249,8 +244,6 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [umd-url]: https://github.com/stdlib-js/stats-base-dists-hypergeometric-variance/tree/umd
 [esm-url]: https://github.com/stdlib-js/stats-base-dists-hypergeometric-variance/tree/esm
 [branches-url]: https://github.com/stdlib-js/stats-base-dists-hypergeometric-variance/blob/main/branches.md
-
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/stats-base-dists-hypergeometric-variance/main/LICENSE
 
 [hypergeometric-distribution]: https://en.wikipedia.org/wiki/Hypergeometric_distribution
 
