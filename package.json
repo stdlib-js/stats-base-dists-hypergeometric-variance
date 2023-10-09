@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/stats-base-dists-hypergeometric-variance",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Hypergeometric distribution variance.",
   "license": "Apache-2.0",
   "author": {
@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@stdlib/constants-float64-pinf": "^0.1.1",
-    "@stdlib/math-base-assert-is-nonnegative-integer": "^0.1.0"
+    "@stdlib/math-base-assert-is-nonnegative-integer": "^0.1.1"
   },
   "devDependencies": {
     "@stdlib/bench": "^0.1.0",
