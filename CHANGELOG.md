@@ -4,7 +4,29 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-03-31)
+## Unreleased (2025-04-02)
+
+<section class="features">
+
+### Features
+
+-   [`56d8d56`](https://github.com/stdlib-js/stdlib/commit/56d8d567d71cc93e1a12de83459be74cc91f2bb0) - add C implementation for `stats/base/dists/hypergeometric/variance` [(#4557)](https://github.com/stdlib-js/stdlib/pull/4557)
+
+</section>
+
+<!-- /.features -->
+
+<section class="issues">
+
+### Closed Issues
+
+This release closes the following issue:
+
+[#3668](https://github.com/stdlib-js/stdlib/issues/3668)
+
+</section>
+
+<!-- /.issues -->
 
 <section class="commits">
 
@@ -12,6 +34,7 @@
 
 <details>
 
+-   [`56d8d56`](https://github.com/stdlib-js/stdlib/commit/56d8d567d71cc93e1a12de83459be74cc91f2bb0) - **feat:** add C implementation for `stats/base/dists/hypergeometric/variance` [(#4557)](https://github.com/stdlib-js/stdlib/pull/4557) _(by Karan Anand)_
 -   [`b9bddfe`](https://github.com/stdlib-js/stdlib/commit/b9bddfefbcc4f301f5a63c9de30b2c11b13a989f) - **bench:** refactor random number generation in `stats/base/dists/hypergeometric` [(#4955)](https://github.com/stdlib-js/stdlib/pull/4955) _(by Karan Anand)_
 
 </details>
