@@ -60,38 +60,32 @@ Imagine a scenario with a population of size `N`, of which a subpopulation of si
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-dists-hypergeometric-variance
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-variance = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-hypergeometric-variance@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var variance = require( 'path/to/vendor/umd/stats-base-dists-hypergeometric-variance/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-hypergeometric-variance@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.variance;
-})();
-</script>
+var variance = require( '@stdlib/stats-base-dists-hypergeometric-variance' );
 ```
 
 #### variance( N, K, n )
@@ -162,15 +156,10 @@ v = variance( 10, 12, 5 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-hypergeometric-variance@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var round = require( '@stdlib/math-base-special-round' );
+var variance = require( '@stdlib/stats-base-dists-hypergeometric-variance' );
 
 var v;
 var i;
@@ -185,11 +174,6 @@ for ( i = 0; i < 10; i++ ) {
     v = variance( N, K, n );
     console.log( 'N: %d, K: %d, n: %d, Var(X;N,K,n): %d', N, K, n, v.toFixed( 4 ) );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -198,7 +182,103 @@ for ( i = 0; i < 10; i++ ) {
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/stats/base/dists/hypergeometric/variance.h"
+```
+
+#### stdlib_base_dists_hypergeometric_variance( N, K, n )
+
+Returns the [variance][variance] of a [hypergeometric][hypergeometric-distribution] distribution with parameters `N` (population size), `K` (subpopulation size), and `n` (number of draws).
+
+```c
+double out = stdlib_base_dists_hypergeometric_variance( 16, 11, 4 );
+// returns ~0.688
+```
+
+The function accepts the following arguments:
+
+-   **N**: `[in] int32_t` population size.
+-   **K**: `[in] int32_t` subpopulation size.
+-   **n**: `[in] int32_t` number of draws.
+
+```c
+double stdlib_base_dists_hypergeometric_variance( const int32_t N, const int32_t K, const int32_t n );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/stats/base/dists/hypergeometric/variance.h"
+#include "stdlib/math/base/special/ceil.h"
+#include <stdlib.h>
+#include <stdint.h>
+#include <stdio.h>
+
+static double random_uniform( const double min, const double max ) {
+    double v = (double)rand() / ( (double)RAND_MAX + 1.0 );
+    return min + ( v * ( max - min ) );
+}
+
+int main( void ) {
+    int32_t N;
+    int32_t K;
+    int32_t n;
+    double v;
+    int i;
+
+    for ( i = 0; i < 10; i++ ) {
+        N = stdlib_base_ceil( random_uniform( 2.0, 100.0 ) );
+        K = stdlib_base_ceil( random_uniform( 0.0, N ) );
+        n = stdlib_base_ceil( random_uniform( 0.0, N ) );
+        v = stdlib_base_dists_hypergeometric_variance( N, K, n );
+        printf( "N: %d, K: %d, n: %d, Var(X;N,K,n): %lf\n", N, K, n, v );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -242,7 +322,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -268,8 +348,8 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 -->
 
-[chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
+[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
+[chat-url]: https://stdlib.zulipchat.com
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
