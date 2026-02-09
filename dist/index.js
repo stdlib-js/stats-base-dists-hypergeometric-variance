@@ -1,5 +1,27 @@
-"use strict";var n=function(r,e){return function(){return e||r((e={exports:{}}).exports,e),e.exports}};var s=n(function(q,u){
-var t=require('@stdlib/math-base-assert-is-nonnegative-integer/dist'),a=require('@stdlib/constants-float64-pinf/dist');function v(r,e,i){return!t(r)||!t(e)||!t(i)||r===a||e===a||e>r||i>r?NaN:i*(e/r)*((r-e)/r)*((r-i)/(r-1))}u.exports=v
-});var c=s();module.exports=c;
 /** @license Apache-2.0 */
-//# sourceMappingURL=index.js.map
+
+'use strict';
+
+/**
+* Hypergeometric distribution variance.
+*
+* @module @stdlib/stats-base-dists-hypergeometric-variance
+*
+* @example
+* var variance = require( '@stdlib/stats-base-dists-hypergeometric-variance' );
+*
+* var v = variance( 16, 11, 4 );
+* // returns ~0.688
+*
+* v = variance( 2, 1, 1 );
+* // returns 0.25
+*/
+
+// MODULES //
+
+var main = require( './main.js' );
+
+
+// EXPORTS //
+
+module.exports = main;
