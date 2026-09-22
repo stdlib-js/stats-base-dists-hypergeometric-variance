@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-01)
+## Unreleased (2026-09-22)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`ef08b9f`](https://github.com/stdlib-js/stdlib/commit/ef08b9f5a6f457b574aa57b11b52d07bb70f0d79) - **refactor:** align JS implementation and migrate `hypergeometric/variance` to ULP-based assertions [(#14370)](https://github.com/stdlib-js/stdlib/pull/14370) _(by Athan Reines, Philipp Burckhardt)_
 -   [`77a562a`](https://github.com/stdlib-js/stdlib/commit/77a562af730f04df4f25308c21fca66cb994b65a) - **bench:** refactor to use string interpolation in `stats/base/dists/hypergeometric` [(#10390)](https://github.com/stdlib-js/stdlib/pull/10390) _(by Vishal Gaikwad)_
 
 </details>
@@ -24,8 +25,10 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
+-   Athan Reines
+-   Philipp Burckhardt
 -   Vishal Gaikwad
 
 </section>
